@@ -9,7 +9,7 @@ class DataHandler:
         self.f.close()
         self.selected = None
 
-    def add_field(self, dictionary: dict):
+    def add_data(self, dictionary: dict):
         key = str(input("Enter the key that you want to add: "))
         yes_no = ''
         while yes_no != 'yes' and yes_no != 'no':
@@ -21,7 +21,7 @@ class DataHandler:
                 value = [{}]
             add = 'yes'
             while add == 'yes':
-                value[0].update(self.add_field(value[0]))
+                value[0].update(self.add_data(value[0]))
                 add = ''
                 while add != 'yes' and add != 'no':
                     add = str(input("Do you want to add more keys?\n")).lower()
@@ -52,6 +52,6 @@ class DataHandler:
 
 handler = DataHandler()
 handler.view_data()
-handler.add_field(handler.data)
+handler.add_data(handler.data)
 handler.view_data()
 handler.write_data()
