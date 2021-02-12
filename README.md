@@ -1,4 +1,4 @@
-# Json_Database_Generator
+# Json Database Generator
 Python Script to Generate A Simple Database
 
 #### Creates instance of the data handler class  
