@@ -35,9 +35,7 @@ class DataHandler:
                 multi = str(input("Do you want to add multiple values?\n")).lower()
                 value = str(input("Enter the value for your defined key: "))
             if multi == 'yes':
-                value = []
-                value = value.append(str(input("Enter the value for your defined property: ")))
-
+                value = [str(input("Enter the value for your defined property: "))]
             dictionary[key] = value
             print(dictionary)
             return dictionary
